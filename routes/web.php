@@ -43,7 +43,7 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function(){
       'create' => 'tags.create',
       'store' => 'tags.store',
       'update' => 'tags.update',
-      'destroy' => 'category.delete',
+      'destroy' => 'tags.delete',
       'edit' => 'tags.edit',
       'index' => 'tags'
     ]);

@@ -42,7 +42,7 @@ class TagsController extends Controller
 
         Session::flash('success', 'tag created susccessfuly.');
 
-        return redirec()->route('admin.tag.store');
+        return redirect()->route('admin.tag.store');
     }
 
     /**
@@ -88,7 +88,7 @@ class TagsController extends Controller
 
         $tag->save();
 
-        Session::flash('success', 'tas updated!')
+        Session::flash('success', 'tags updated!');
 
         return redirect()->back();
     }
@@ -104,7 +104,7 @@ class TagsController extends Controller
         $tag = Tag::findOrFail($id);
         $tag->delete();
 
-        Session::flash('warning', 'Susscess to delete the tag.')
+        Session::flash('warning', 'Susscess to delete the tag.');
 
         return redirect()->back();
     }

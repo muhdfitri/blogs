@@ -9,7 +9,7 @@
         Update Tag:
         </div>
         <div class="card-body">
-            <form action="{{ route('tag.update', ['id' => $tag->id]) }}" method="post">
+            <form action="{{ route('tags.update', ['id' => $tag->id]) }}" method="post">
             @method('put')
             {{ csrf_field() }}
 

@@ -16,8 +16,8 @@
                 @foreach($tags as $tag)
                     <tr>
                         <td>{{ $tag->tag }}</td>
-                        <td><a href="{{ route('tag.edit', ['id' => $tag->id]) }}" class="btn btn-sm btn-info">Edit</a></td>
-                        <td><form action="{{ route('tag.delete', ['id' => $tag->id]) }}" method="post">
+                        <td><a href="{{ route('tags.edit', ['id' => $tag->id]) }}" class="btn btn-sm btn-info">Edit</a></td>
+                        <td><form action="{{ route('tags.delete', ['id' => $tag->id]) }}" method="post">
                         @method('delete')
                         {{ csrf_field() }}
                         <button class="btn btn-sm btn-danger" type="submit">Delete</button>
