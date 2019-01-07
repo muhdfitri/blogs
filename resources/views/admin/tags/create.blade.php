@@ -6,7 +6,7 @@
 @include('admin.include.errors')
      <div class="card">
         <div class="card-header">
-        Create a new tags
+        Create a new tag
         </div>
         <div class="card-body">
             <form action="{{ route('tags.store') }}" method="post">
@@ -15,7 +15,7 @@
 
                 <div class="form-group">
                     <label for="tag">Name</label>
-                    <input type="text" name="tag" class="form-control">
+                    <input type="text" name="tag" data-role="tagsinput" class="form-control">
                 </div>
                 
                 <div class="form-group">

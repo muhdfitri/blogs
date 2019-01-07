@@ -6,7 +6,7 @@
 @include('admin.include.errors')
      <div class="card">
         <div class="card-header">
-        Update Tag:
+        Update tags
         </div>
         <div class="card-body">
             <form action="{{ route('tags.update', ['id' => $tag->id]) }}" method="post">
@@ -15,8 +15,7 @@
 
                 <div class="form-group">
                     <label for="tag">Name</label>
-                    <input type="text" name="tag" value="{{ $tag->tag }}"
-                    class="form-control">
+                    <input type="text" name="tag" value="{{ $tag->tag }}" data-role="tagsinput" class="form-control">
                 </div>
                 
                 <div class="form-group">

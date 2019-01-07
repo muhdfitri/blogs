@@ -42,7 +42,7 @@ class TagsController extends Controller
 
         Session::flash('success', 'tag created susccessfuly.');
 
-        return redirect()->route('admin.tag.store');
+        return redirect()->back();
     }
 
     /**
@@ -78,7 +78,7 @@ class TagsController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $this->validate([
+        $this->validate($request, [
             'tag' => 'required'
         ]);
 
@@ -90,7 +90,7 @@ class TagsController extends Controller
 
         Session::flash('success', 'tags updated!');
 
-        return redirect()->back();
+        return redirect()->route('tags');
     }
 
     /**

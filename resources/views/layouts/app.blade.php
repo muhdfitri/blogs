@@ -18,6 +18,7 @@
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link href="{{ asset('css/toastr.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/bootstrap-tagsinput.css') }}" rel="stylesheet">
 
 </head>
 <body>
@@ -92,7 +93,7 @@
                     <a href="{{ route('posts') }}">All post</a> 
                     </li>
                     <li class="list-group-item">
-                    <a href="{{ route('tags') }}">All Tags</a> 
+                    <a href="{{ route('tags') }}">All tags</a> 
                     </li>
                     <li class="list-group-item">
                     <a href="{{ route('category.create') }}">Create a categories</a> 
@@ -101,7 +102,7 @@
                     <a href="{{ route('post.create') }}">Create a new post</a> 
                     </li>
                     <li class="list-group-item">
-                    <a href="{{ route('tags.create') }}">Create Tag</a>
+                    <a href="{{ route('tags.create') }}">Create tag</a>
                     </li>
                     </ul>
                 </div>
@@ -130,6 +131,6 @@
                     toastr.warning("{{ Session::get('warning') }}");
                 @endif
     </script>
-
+    <script src="{{ asset('js/bootstrap-tagsinput.js') }}"></script>
 </body>
 </html>
